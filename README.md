@@ -1,29 +1,81 @@
 # vue-base-project
 
-## Project setup
+### flexible
+
 ```
-npm install
+// install
+npm install lib-flexible --save
+npm install px2rem-loader --save
+// import
+import 'lib-flexible/flexible.js'
+// config in vue.config.js
+css: {
+  loaderOptions: {
+    css: {},
+    postcss: {
+      plugins: [
+        require('postcss-px2rem')({
+          remUnit: 37.5
+        })
+      ]
+    }
+  }
+}
 ```
 
-### Compiles and hot-reloads for development
+### fastclick
+
 ```
-npm run serve
+// install
+npm i fastclick --save
+// import
+import FastClick from 'fastclick'
+// config in main.js
+FastClick.attach(document.body)
 ```
 
-### Compiles and minifies for production
+### vue-analytics
+
 ```
-npm run build
+// install
+npm install vue-analytics --save
+// config in main.js
+Vue.use(VueAnalytics, {
+  id: 'UA-XXX-X',
+  disableScriptLoader: true,
+  router,
+  autoTracking: {
+    pageviewOnLoad: false
+  },
+  debug: {
+    enabled: false
+  }
+})
 ```
 
-### Run your tests
-```
-npm run test
-```
+### vuex-persistedstate
 
-### Lints and fixes files
 ```
-npm run lint
+// install
+npm install vuex-persistedstate --save
+// usage
+import createPersistedState from 'vuex-persistedstate'
+export default new Vuex.Store({
+  actions,
+  getters,
+  state,
+  mutations,
+  strict: debug,
+  // 状态持久化
+  plugins: debug ? [
+    createLogger(),
+    createPersistedState({
+      storage: {
+        getItem: key => storage.get(key),
+        setItem: (key, value) => storage.set(key, value),
+        removeItem: key => storage.remove(key)
+      }
+    })
+  ] : []
+})
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

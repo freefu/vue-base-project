@@ -1,0 +1,157 @@
+@import "variable.styl"
+
+body, html
+  line-height: 1
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+  background: #fff
+  color: $color-text
+  height 100%
+
+/* form */
+.form-title
+  font-size 16px
+  color $color-text-s
+  line-height 22px
+  font-family 'PingFangSC-Medium'
+  font-weight 500
+
+.form-section
+  position relative
+  margin 10px auto 0 auto
+
+  label
+    position absolute
+    top 5px
+    left 15px
+    font-size 12px
+    line-height 17px
+    color $color-text-l
+
+  input
+    width 100%
+    height 48px
+    border 1px solid #F5F6F8
+    border-radius 2px
+    outline 0
+    background-color #F5F6F8
+    padding 0 15px
+    box-sizing border-box
+    transition 0.2s
+    font-size 14px
+    color $color-text-i
+
+  input
+    &:focus
+      // padding-top 18px
+
+.form-section.input
+  input
+    padding-top 18px
+
+.form-section.correct
+  &:after
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color #28C359
+    content "\e608"
+    position absolute
+    top 50%
+    right 10px 
+    transform translateY(-50%)
+
+  input
+    border 1px solid #28C359
+    padding-top 18px
+  
+  .cvc-info-btn
+    display none
+
+.form-section.error
+  &:after
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color #C32828
+    content "\e607"
+    position absolute
+    top 50%
+    right 10px 
+    transform translateY(-50%)
+  
+  label
+    color #C32828
+
+  input
+    border 1px solid #C32828
+    padding-top 18px
+
+  .cvc-info-btn
+    display none
+
+.form-section.select
+  width 100%
+  height 48px
+  border 0
+  border-radius 2px
+  outline 0
+  background-color #F5F6F8
+  padding 0 15px
+  box-sizing border-box
+
+  &:after
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content "\e605"
+    font-size 12px
+    color $color-text-l
+    position absolute
+    top 50%
+    right 18px
+    transform translateY(-50%)
+
+  label
+    top 0
+    font-size 14px
+    line-height 48px
+
+  select
+    width 200px
+    height 48px
+    background none
+    color $color-text-i
+    float right
+    border 0
+    outline 0
+    -webkit-appearance none
+    padding-right 30px
+
+.btn
+  display block
+  width 100%
+  height 50px
+  line-height 50px
+  font-size 18px
+  font-family 'Helvetica-Bold'
+  font-weight bold
+  color $color-text
+  text-align center
+  background-color $color-btn
+  border 0
+  border-radius 2px
+  margin 20px auto 0 auto
+
+  &:active
+    opacity 0.7
+
+.btn.dis
+  background-color $color-btn-dis
