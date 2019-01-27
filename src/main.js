@@ -2,7 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from '@/router'
 import store from '@/store'
+import '@/router/permission'
+
+import 'nprogress/nprogress.css'
 import './common/stylus/index.styl'
+
 import 'lib-flexible/flexible.js'
 import VueAnalytics from 'vue-analytics'
 import FastClick from 'fastclick'

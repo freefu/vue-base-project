@@ -5,6 +5,7 @@ import 'nprogress/nprogress.css'
 //  判断是否需要登录权限 以及是否登录
 router.beforeEach((to, from, next) => {
   NProgress.start()
+  next()
 })
 
 router.afterEach(transition => {
