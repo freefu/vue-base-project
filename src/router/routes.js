@@ -1,5 +1,4 @@
 // 路由懒加载
-// const _import = file => () => import('@/views/' + file + '.vue')
 const _import = file => () => import('@/views/' + file + '/index.vue')
 
 // 路由配置表

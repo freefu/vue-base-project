@@ -14,8 +14,8 @@ export default {
   components: {},
   computed: {},
   methods: {},
-  created () { },
-  mounted () { }
+  created () {},
+  mounted () {}
 }
 
 </script>

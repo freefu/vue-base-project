@@ -95,8 +95,8 @@ module.exports = {
     https: false,
     hotOnly: false,
     proxy: {
-      '/index.php/': {
-        target: 'http://zhulichou.helloshi.com/', // 目标接口域名 'http://localhost:8088/api' ===> 'http://www.abc.com/api'
+      '/pai': {
+        target: 'easy-mock', // 目标接口域名 'http://localhost:8088/api' ===> 'http://www.abc.com/api'
         changeOrigin: true, // 是否跨域
         pathRewrite: {
           '^/api': '/' // 重写接口
