@@ -6,22 +6,13 @@ import '@/router/permission'
 
 import 'nprogress/nprogress.css'
 import './common/stylus/index.styl'
+import './common/js/rem.js'
 
-import 'lib-flexible/flexible.js'
-import VueAnalytics from 'vue-analytics'
+import Vant from 'vant'
+import 'vant/lib/index.css'
+
 import FastClick from 'fastclick'
-
-Vue.use(VueAnalytics, {
-  id: 'UA-XXX-X',
-  disableScriptLoader: true,
-  router,
-  autoTracking: {
-    pageviewOnLoad: false
-  },
-  debug: {
-    enabled: false
-  }
-})
+Vue.use(Vant)
 
 FastClick.attach(document.body)
 // focus in ios bug

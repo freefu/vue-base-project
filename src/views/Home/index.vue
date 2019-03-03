@@ -1,15 +1,14 @@
 <!-- home -->
 <template>
   <div class="home-container">
-    home
+    <van-button type="primary">按钮</van-button>
   </div>
 </template>
 
 <script>
 export default {
   data () {
-    return {
-    }
+    return {}
   },
   components: {},
   computed: {},
@@ -17,7 +16,6 @@ export default {
   created () {},
   mounted () {}
 }
-
 </script>
 
 <style scoped lang="stylus">

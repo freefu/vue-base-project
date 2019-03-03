@@ -67,6 +67,9 @@ module.exports = {
       css: {},
       postcss: {
         plugins: [
+          require('autoprefixer')({
+            browsers: ['last 10 Chrome versions', 'last 5 Firefox versions', 'Safari >= 6', 'ie> 8']
+          }),
           require('postcss-px2rem')({
             remUnit: 37.5
           })
